@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;/*Elements que indican que volem que les caixes, o box, tractin el tamany
+    en aquest cas amb el marge*/
+}
+body {
+    background: rgb(153, 183, 233);
+}
+
+.navegacion {
+    width: 1000px;
+    margin: 30px auto;/*Els px són d'adalt i abaix i l'auto dels costats*/
+    background: white;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+}
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: #353535;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.menu li a:hover {
+    color: orange;
+    transition: all 1s;
+    background-color: silver;
+}
+/*Submenu*/
+.submenu {
+    position: absolute;
+    background: white;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color:  #353535;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition: all 2s;
+}
